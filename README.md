@@ -7,11 +7,11 @@ docker-compose up
 ```
 
 Endpoints:
-- GET /user
-  \return all user
+- GET /user <br>
+  return all user
 
-- POST /user
-  \insert new user
+- POST /user <br>
+  insert new user
   body:
   ```json
   {
