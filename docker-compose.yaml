@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  my-app:
+    build: .
+    image: my-app:2.0
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=mysql_db
+      - DB_PORT=6033
+  mysql_db:
+    image: mysql:latest
+    ports:
+      - "6033:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    volumes:
+      - mysql-data:/var/lib/mysql
+volumes:
+  mysql-data:
+    driver: local
