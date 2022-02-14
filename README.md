@@ -11,7 +11,7 @@ Endpoints:
   return all user
 
 - POST /user <br>
-  insert new user
+  insert new user <br>
   body:
   ```json
   {
